@@ -5,7 +5,7 @@ const Loader = ({ imageSrc }) => {
         <img
           src={imageSrc}
           alt="bot icon"
-          className={`w-[35px] h-auto cursor-pointer absolute -left-10 mt-1`}
+          className={`w-[26px] h-auto md:w-[35px] md:h-auto cursor-pointer absolute -left-10 mt-1`}
         />
       ) : (
         ""
