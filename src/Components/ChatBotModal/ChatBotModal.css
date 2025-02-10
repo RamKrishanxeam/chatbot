@@ -68,7 +68,7 @@ button {
   background-color: #45a049;
 } */
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
   .chatbot-container {
     width: 375px;
     height: 812px;
