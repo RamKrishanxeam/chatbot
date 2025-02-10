@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size: inherit;
+}

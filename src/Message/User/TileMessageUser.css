@@ -1,0 +1,58 @@
+/* TileMessageUser.css */
+
+.tile-message-user-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-end; /* Align to the right */
+  animation: slideInRight 0.3s ease-out; /* Smooth sliding animation */
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size:inherit;
+}
+
+.tile-image {
+  width: 60px; /* Fixed width for tiles */
+  height: auto; /* Fixed height for tiles */
+  border-radius: 8px; /* Rounded corners */
+  margin-right: 10px; /* Space between image and text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition */
+}
+
+.tile-image:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.tile-message-text {
+  color: black; /* Text color */
+  margin-right: 10px; /* Space on the right */
+  padding: 5px 10px; /* Padding around text */
+  max-width: 200px; /* Maximum width for text */
+  word-wrap: break-word; /* Break words to avoid overflow */
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Slide from the right */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media query for mobile/tablet widths */
+@media (min-width: 1441px){
+.tile-message-text {
+  font-size: 16px;
+}
+}
+

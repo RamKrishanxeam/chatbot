@@ -1,0 +1,255 @@
+.main-page {
+  display: flex;
+  height: 100vh; /* Ensures full viewport height */
+  background-color: #faf9f9; /* Optional background color */
+}
+
+.bigger-component-1 {
+  display: flex;
+}
+.bigger-contact-us {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.main-landing-container {
+  flex: 1; /* Takes up space on the left side */
+  padding: 20px;
+  background-color: #faf9f9; /* Example background color */
+  max-width: 60%; /* Adjust if needed */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.chat-window-container {
+  max-width: 40%;
+  flex: 1; /* Takes up the remaining width */
+  display: flex;
+  flex-direction: column; /* Ensures content inside is arranged vertically */
+  background-color: #ffffff; /* Example background color */
+  border-left: 2px solid #ccc; /* Optional separator */
+  height: 100%; /* Full height of the parent */
+}
+
+.chat-window-container .chat-content {
+  flex: 1; /* Takes up all remaining space */
+  overflow-y: auto; /* Makes this section scrollable */
+}
+
+/* Component 1 */
+.main-component-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 80px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+}
+
+.main-company-name {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #616ab8;
+  margin-bottom: -18px;
+  cursor: pointer;
+}
+
+.main-powered-by {
+  font-size: 20px;
+  color: black;
+  font-weight: 100;
+  cursor: pointer;
+}
+.main-component-2 {
+  display: flex;
+  flex-direction: column; /* Stack the feature components vertically */
+  gap: 2.8rem; /* Space between each feature */
+  padding: 1rem;
+  /* margin-left: 100px; */
+  margin-left: 60px;
+}
+
+.feature {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 1.5rem; /* Space between image and text */
+}
+
+.feature-image {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  object-fit: cover; /* Make sure image scales properly */
+  border-radius: 10px; /* Optional: round the corners of the image */
+}
+
+.feature-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+
+.main-component-2-text {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.main-component-2-text strong {
+  font-weight: bold; /* Make the word "AI" bold */
+}
+
+.model-screen-contact-us {
+  position: absolute;
+  bottom: -5px;
+  padding: 1rem;
+  margin-left: 60px;
+}
+
+/* MOBILE FEATURE STYLING */
+.mobile-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1.5rem; */
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #6a6868;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 160px;
+  /* width: 12rem; */
+  height: 11rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .bigger-contact-us {
+    display: none;
+  }
+}
+
+/* Add responsiveness */
+@media (max-width: 1024px) {
+  .feature-image {
+    width: 40px; /* Adjust image size for smaller screens */
+    height: 40px;
+  }
+
+  .main-component-2-text {
+    font-size: 1.5rem;
+  }
+
+  .main-component-1 {
+    margin-bottom: 80px;
+  }
+  .main-component-2 {
+    margin-left: 60px;
+  }
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .main-page {
+    flex-direction: column;
+    /* height: 100%; */
+  }
+
+  .main-landing-container {
+    max-width: 100%;
+    height: fit-content;
+    overflow-y: visible;
+    flex: 0;
+  }
+
+  .chat-window-container {
+    max-width: 100%;
+  }
+
+  .main-component-1 {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    gap: 7px;
+  }
+
+  .main-component-2 {
+    padding: 0px;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0px;
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  .feature {
+    flex-direction: column; /* Stack the image and text vertically on small screens */
+    align-items: center;
+  }
+
+  .mobile-feature-card {
+    width: 200px;
+    padding: 0.5rem;
+  }
+  .main-company-name {
+    font-size: 2.5rem; /* Much smaller text for small screens */
+  }
+
+  .main-powered-by {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .model-screen-contact-us {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-feature-card {
+    width: 160px;
+    padding: 1.5px;
+  }
+
+  .main-company-name {
+    font-size: 2rem; /* Much smaller text for small screens */
+  }
+
+  .main-powered-by {
+    font-size: 9px; /* Further reduce font size */
+  }
+  .model-screen-contact-us {
+    display: none;
+  }
+}
+
+.mobile-feature-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-image-container {
+  margin-bottom: 1rem;
+}
+
+.mobile-feature-image {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.mobile-text-container {
+  text-align: center;
+  word-break: break-word;
+  overflow-x: hidden;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.mobile-feature-title {
+  color: #374151;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.mobile-feature-title strong {
+  font-weight: 600;
+}

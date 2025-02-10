@@ -1,0 +1,213 @@
+/* General reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #c0d2f7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #eae7dd;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size:inherit;
+}
+
+/* App-specific styling */
+.app {
+  display: flex;
+  height: 100vh;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+/* Chatbot-specific styling */
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4c4b42;
+  color: #eae7dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Chatbot window styling */
+.chatbot-window {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #3a3832;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-window-header {
+  background-color: #4c4b42;
+  color: #eae7dd;
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-window-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message p {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 75%;
+}
+
+.message.user p {
+  background-color: #007bff;
+  color: white;
+}
+
+.message.bot p {
+  background-color: #5c5c5c;
+  color: white;
+}
+
+/* Button styling */
+.upload-button {
+  background-color: #5c5c5c;
+  color: #eae7dd;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.upload-button:hover {
+  background-color: #007bff;
+}
+
+.contact-button {
+  background: linear-gradient(to right, #4066E8, #63B3ED);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width:auto;
+  height: auto;
+
+}
+.contact-button:hover {
+  background: linear-gradient(to right, #3655cc, #529bd5);
+  transform: translateY(-1px);
+}
+
+.options, .tiles, .collapsible {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #5c5c5c;
+  color: #eae7dd;
+}
+
+/* Responsive adjustments */
+/* Mobile first: Adjust chatbot window and font sizes for smaller screens */
+@media only screen and (max-width: 600px) {
+  .chatbot-window {
+    width: 90%; /* Make chatbot window more fluid */
+    height: 80%; /* Adjust height for mobile */
+    bottom: 20px;
+    right: 10px;
+  }
+
+  .chat-window-header {
+    font-size: 16px; /* Slightly smaller font */
+  }
+
+  .chatbot-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .upload-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet view */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .chatbot-window {
+    width: 80%; /* Adjust width for tablet */
+    height: 450px;
+  }
+
+  .chatbot-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+}
+
+/* Larger screens: Adjust chatbot and buttons for desktop */
+@media only screen and (min-width: 901px) {
+  .chatbot-window {
+    width: 400px;
+    height: 500px;
+  }
+
+  .chatbot-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .upload-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}

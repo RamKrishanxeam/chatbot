@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f7f8f9;
+  color: #171717;
+  margin: 0;
+  padding: 0;
+}
+.customClass {
+  position: absolute !important;
+  left: 9rem !important;
+  margin-top: 6px;
+  width: 25px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  width: 90%;
+  border-radius: 30px;
+}
+
+.popup-content {
+  width: 100%;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  max-height: 690px;
+}
+
+.scanner-imageFile {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+}
+
+.scanner {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 93%;
+  margin: 0 auto;
+  height: 88%;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 115, 242, 0.6) 0%,
+    rgba(29, 115, 242, 0.1) 100%
+  );
+  border-radius: 0.5rem;
+  animation: scanEffect 3s infinite;
+}
+
+@keyframes scanEffect {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 88%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+/* dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #1d73f2;
+  border-radius: 50%;
+  animation: dot 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dot {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

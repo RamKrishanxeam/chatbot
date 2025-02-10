@@ -1,0 +1,32 @@
+.message {
+  margin-bottom: 10px; /* Space between messages */
+  padding: 12px; /* Increased padding for better touch targets */
+  border-radius: 10px; /* More pronounced rounded corners */
+  background-color: #faf9f9; /* Slightly lighter gray for a softer look */
+  position: relative; /* Position for absolute elements like timestamps */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size:inherit;
+}
+
+.message:hover {
+  background-color: #e2e2e2; /* Darken on hover for interaction feedback */
+}
+
+.message-content {
+  font-size: 16px; /* Font size for the message content */
+  line-height: 1.4; /* Improved line height for better readability */
+  color: #333; /* Dark text for better contrast */
+}
+
+.message-time {
+  font-size: 12px; /* Smaller font size for timestamp */
+  color: #888; /* Lighter gray for timestamp */
+  position: absolute; /* Position it to the right */
+  bottom: 5px; /* Position from bottom */
+  right: 10px; /* Position from right */
+  opacity: 0.7; /* Slight transparency for a subtle effect */
+}

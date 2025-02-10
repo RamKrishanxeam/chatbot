@@ -1,0 +1,17 @@
+.slider-container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+}
+
+.slider-divider {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #4caf50;
+  z-index: 1;
+  transition: left 0.1s linear;
+}

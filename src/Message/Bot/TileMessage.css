@@ -1,0 +1,208 @@
+.tiles-container {
+    margin: 1rem 0; /* Space around the tile container */
+    max-width: 75%; /* Limit width for tile message */
+    align-self: flex-start; /* Align to the left in flex container */
+    animation: slideIn 0.3s ease-out; /* Smooth sliding animation */
+    border: none; /* Ensure no border */
+    padding: 0; /* Remove any padding */
+    background: rgb(242, 242, 242);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /* Default to regular weight */
+    font-style: normal;
+    font-size:inherit;
+}
+
+.header-text {
+    margin-bottom: 20px; /* Space below header */
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /* Default to regular weight */
+    font-style: normal;
+    font-size:smaller;
+}
+
+.tiles-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow tiles to wrap into multiple rows */
+    justify-content: center; /* Default: Center the tiles */
+    gap: 1rem; /* Space between tiles */
+}
+
+/* Consistent tile size */
+.tile {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    flex: 1 1 calc(33.33% - 1rem); /* Consistent size for all tiles */
+    max-width: calc(33.33% - 1rem); /* Ensures tiles fit in 3 columns */
+}
+
+.tile.selected {
+    border: 2px solid #0073e6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tile img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* New Product Name Styling */
+.product-name {
+    margin-top: 8px;
+    font-size: smaller; /* Slightly smaller font */
+    text-align: center; /* Center the product name below the image */
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.special-tag {
+    max-width: 75%;
+    background-color: #616ab83a;
+    color: #f9f9f9;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 8px 0 8px 0; /* Top-left 8px, Top-right 0, Bottom-right 0, Bottom-left 8px */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+  }
+  
+/* For fewer than 3 tiles, still center them */
+.tiles-grid.few-tiles {
+    justify-content: center; /* Center the tiles */
+}
+
+.related-text {
+    margin-top: 30px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /* Default to regular weight */
+    font-style: normal;
+    font-size:smaller;
+}
+
+/* Styles for the info button */
+.info-button {
+    position: absolute; /* Make it absolute to position it inside the tile */
+    top: 5px; /* Adjust the top positioning */
+    right: 5px; /* Adjust the right positioning */
+    background: transparent; /* Transparent background for the button */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Show a pointer on hover */
+    z-index: 2; /* Ensure it's above other elements */
+    width: 20px; /* Reduce the size of the clickable area */
+    height: 20px; /* Ensure it’s a square and the clickable area is small */
+    display: flex; /* Align the icon in the center */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the info icon inside the button */
+  .info-icon {
+    width: 14px; /* Adjust the size of the icon */
+    height: 14px; /* Ensure it's a square */
+  }
+  .info-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.info-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+  
+@media (max-width: 300px) {
+    .special-tag {
+        display: none;
+    }
+    .tile {
+        flex: 1 1 calc(50% - 1rem); /* On smaller screens, show 2 tiles per row */
+        max-width: calc(50% - 1rem);
+    }
+    .info-button {
+        width: 14px;
+        height: 14px;
+    }
+    .tiles-container {
+        max-width: 75%; /* Allow more space for messages on smaller screens */
+    }
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+    .tile {
+        flex: 1 1 calc(50% - 1rem); /* On smaller screens, show 2 tiles per row */
+        max-width: calc(50% - 1rem);
+    }
+    .special-tag {
+        font-size: 12px;
+        max-width: 80%;
+    }
+    .info-button {
+        width: 14px;
+        height: 14px;
+    }
+    .tiles-container {
+        max-width: 75%; /* Allow more space for messages on smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .special-tag {
+        font-size: 12px;
+    }
+    .info-button {
+        width: 16px;
+        height: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1240px) {
+    .special-tag {
+        display: none;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Slide from the left */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Media query for mobile/tablet widths */
+@media (min-width: 1441px){
+    .header-text, .product-name, .related-text {
+        font-size: 16px;
+     }
+  }
+  
+    

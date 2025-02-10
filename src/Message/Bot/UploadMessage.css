@@ -1,0 +1,78 @@
+.upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  max-width: 100%;
+  padding-bottom: 10px;
+  border: 1px dashed #8b6f4e;
+  border-radius: 12px;
+  background: white;
+  transition: border-color 0.3s ease;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /* Default to regular weight */
+  font-style: normal;
+  font-size:inherit;
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+.upload-container:hover {
+  border-color: #6b4d2e; /* Change border color on hover */
+  box-shadow: 0 4px 10px rgba(139, 111, 78, 0.2); /* Add a subtle shadow */
+  background-color: #f9f9f9; /* Slight background change for hover effect */
+}
+
+.upload-icon {
+  margin-top: 0px;
+  font-size: 80px;
+  color: #8b6f4e;
+  margin-bottom: -30px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+.upload-container:hover .upload-icon {
+  color: #6b4d2e; /* Darken the icon color on hover */
+}
+
+.upload-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upload-main-text {
+  font-size:18px;
+  margin-bottom:-25px;
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+.upload-container:hover .upload-main-text {
+  color: #6b4d2e; /* Darken the main text color on hover */
+}
+.upload-sub-text {
+  color: #878787;
+  font-size:12px;
+}
+.upload-container:hover .upload-sub-text {
+  color: #6b4d2e; /* Match the hover effect color */
+}
+
+
+/* Media query for mobile/tablet widths */
+@media (min-width: 1441px) {
+  .upload-icon {
+    margin-top: -10px;
+    font-size: 100px;
+    color: #8b6f4e;
+    margin-bottom: -40px;
+  }
+
+ .upload-main-text {
+  margin-bottom:-25px;
+    font-size:24px;
+  }
+  .upload-sub-text {
+    color: #878787;
+    font-size:16px;
+  }
+}

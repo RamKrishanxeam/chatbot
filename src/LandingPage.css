@@ -1,0 +1,404 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main Container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #faf9f9;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Mobile warning */
+.mobile-warning {
+  display: none; /* Hide by default */
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Component 1 */
+.component-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 20px;
+  gap: 7px;
+}
+
+.company-name {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #616ab8;
+  margin-bottom: -18px;
+  cursor: pointer;
+}
+
+.powered-by {
+  font-size: 20px;
+  color: black;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+/* Component 2 */
+.component-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.gen-ai-text {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.gen-ai-black {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+.gen-ai-blue {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #616ab8;
+}
+
+.email-input-container {
+  margin-bottom: 30px;
+  width: 50%;
+}
+
+.email-input {
+  padding: 25px;
+  font-size: larger;
+  width: 100%;
+  border: 2px solid #6a6868;
+  border-radius: 12px;
+  background-color: #faf9f9;
+  color: #807d7d;
+  font-family: "Poppins", sans-serif;
+  height: 65px;
+}
+
+.demo-button-container {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.demo-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: rgb(236, 236, 236);
+  background: linear-gradient(to right, #5276b8, #92b3c0);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  /* width: 12%; */
+  width: 230px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.demo-button:hover {
+  background: linear-gradient(to right, #0056b3, #1f7dcd);
+}
+
+/* Component 3 */
+.component-3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  /* padding-right: 80px; */
+  /* padding-bottom: 20px; */
+  /* margin-left: -100px; */
+}
+
+.award {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #616ab8;
+}
+
+.award-text {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.bullet-point {
+  font-size: 40px;
+  margin-right: 5px;
+  color: #616ab8;
+}
+
+.award-link {
+  color: #616ab8;
+  text-decoration: none;
+  margin-right: 5px;
+  font-weight: 100;
+}
+
+.award-link:hover {
+  text-decoration: underline;
+}
+
+.at-text {
+  color: black;
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  background: none;
+}
+
+.contact-link {
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 5px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: showError 4s forwards; /* Animate error visibility */
+}
+
+@keyframes showError {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .landing-container {
+    padding: 10px 30px;
+  }
+  .company-name {
+    font-size: 2.8rem; /* Smaller font size for tablets */
+  }
+
+  .gen-ai-text {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+
+  .gen-ai-black, .gen-ai-blue {
+    font-size: 2.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .component-1 {
+    padding-left: 20px;
+  }
+
+  .email-input-container {
+    width: 60%; /* Make input container larger on medium screens */
+  }
+  .email-input {
+    height: 60px;
+    border-radius: 12px;
+    font-size: large;
+  }
+
+  .demo-button {
+    width: 225px; /* Increase button width */
+    /* width: 25%; */
+    padding: 13px 30px;
+  }
+
+  .component-2 {
+    padding: 20px;
+  }
+
+  .component-3 {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .award-text {
+    font-size: 18px; /* Smaller text size for medium screens */
+  }
+
+  .contact-link {
+    font-size: 18px; /* Smaller font size for smaller devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding: 30px; /* Reduce padding on smaller screens */
+  }
+
+  .company-name {
+    font-size: 2rem; /* Further decrease font size */
+  }
+
+  .powered-by {
+    font-size: 16px; /* Decrease powered-by font size */
+  }
+
+  .component-1 {
+    padding-left: 20px;
+  }
+
+  .gen-ai-text {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .gen-ai-black, .gen-ai-blue {
+    font-size: 2rem; /* Adjust text for smaller screens */
+  }
+
+  .email-input-container {
+    width: 80%; /* Take more width on mobile devices */
+  }
+
+  .email-input {
+    padding: 18px; /* Adjust input padding */
+    font-size: 18px; /* Adjust font size */
+    height: 50px;
+  }
+
+  .demo-button {
+    width: 210px; /* Make the button wider */
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  .component-3 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+    margin-left: 0;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .award-text {
+    font-size: 15px; /* Smaller font size */
+  }
+
+  .contact-link {
+    font-size: 15px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-warning {
+    display: none; /* Show on mobile devices */
+  }
+
+  .landing-container {
+    padding: 20px; /* Reduce padding for very small screens */
+  }
+
+  .company-name {
+    font-size: 1.6rem; /* Much smaller text for small screens */
+  }
+
+  .powered-by {
+    font-size: 14px; /* Further reduce font size */
+  }
+
+  .gen-ai-text {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .gen-ai-black, .gen-ai-blue {
+    /* font-size: 2.5rem; */
+    font-size: 1.9rem;
+  }
+
+  .email-input-container {
+    width: 90%; /* Make input container even larger on smaller screens */
+  }
+
+  .email-input {
+    padding: 15px; /* Adjust padding for small devices */
+    font-size: 16px; /* Reduce font size */
+    height: 50px;
+  }
+
+  .demo-button {
+    width: 167px; /* Make button take more space */
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .component-3 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+    margin-left: 0;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .award-text {
+    font-size: 13px; /* Reduce text size further */
+  }
+
+  .contact-link {
+    font-size: 13px; /* Further reduce font size */
+  }
+}
