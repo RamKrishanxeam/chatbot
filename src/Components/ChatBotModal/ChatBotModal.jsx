@@ -1,6 +1,7 @@
 import "./ChatBotModal.css";
 import React, { useState, useEffect, useRef } from "react";
 import star from "../../assets/images/star.png";
+import crossButton from "../../assets/images/crossButton.png";
 import MessageList from "../../Message/MessageList";
 import InputBox from "../InputBox/InputBox";
 import attachment from "../../assets/images/attachment.png";
@@ -36,7 +37,7 @@ const ChatBotModal = ({
   return (
     modalOpen && (
       <div className="chatbot-container">
-        <div className="flex items-center gap-3 p-3">
+        <div className="flex items-center justify-between gap-3 p-3">
           <img
             src={star}
             alt="arrow down"
@@ -50,6 +51,12 @@ const ChatBotModal = ({
               We are online to assist you
             </p>
           </div>
+          <img
+            src={crossButton}
+            alt="crossButton"
+            className="w-8 h-8 cursor-pointer"
+            onClick={closeModal}
+          />
         </div>
 
         <div className="relative bg-[#F7F8F9] rounded-[18px] h-[759px]">
