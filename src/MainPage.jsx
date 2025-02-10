@@ -33,8 +33,8 @@ const MainPage = () => {
   const [countertopData, setcountertopData] = useState([]);
   const [segmentData, setSegmentData] = useState([]);
 
-  const endpoint = "http://127.0.0.1:5000";
-  // const endpoint = "https://ai-chatbot-sky6.onrender.com";
+  // const endpoint = "http://127.0.0.1:5000";
+  const endpoint = "https://ai-chatbot-sky6.onrender.com";
 
   const navigate = useNavigate();
 
