@@ -72,7 +72,8 @@ button {
   .chatbot-container {
     width: 385px;
     height: 812px;
-    /* bottom: 0px; */
+    bottom: 0px;
+    
     left: 0;
     right: 0;
     margin: 0 auto;
