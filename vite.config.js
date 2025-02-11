@@ -11,4 +11,8 @@ export default defineConfig({
   optimizeDeps: {
     include: ["firebase/app", "firebase/auth"],
   },
+  server: {
+    host: "0.0.0.0",
+    port: 3000,
+  },
 });

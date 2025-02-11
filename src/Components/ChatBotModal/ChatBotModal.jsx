@@ -62,7 +62,7 @@ const ChatBotModal = ({
         <div className="relative bg-[#F7F8F9] rounded-[18px] h-[759px]">
           <div
             ref={chatBoxRef}
-            className="chat-box overflow-y-scroll h-[633px]"
+            className="chat-box md:overflow-y-scroll h-[645px] md:h-[633px]"
           >
             <div className="rounded-[18px]  px-[15px] pb-[15px]">
               <div className="relative bg-[#F7F8F9]  h-full px-3 md:px-5">

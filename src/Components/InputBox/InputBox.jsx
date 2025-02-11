@@ -39,7 +39,7 @@ const InputBox = ({ handleSendMessage, loading, handleUpload }) => {
   };
 
   return (
-    <div className="flex items-center input-container absolute bottom-4 w-[342px] md:w-[628px] h-[56px] rounded-[12px] border  ">
+    <div className="flex items-center justify-center input-container absolute left-0 right-0 bottom-4 w-[347px] mx-auto md:w-[628px] md:mx-auto h-[56px] rounded-[12px] border  ">
       <input
         type="text"
         value={input}
