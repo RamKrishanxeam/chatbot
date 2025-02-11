@@ -99,16 +99,14 @@ const ProductDetail = ({
       </div>
 
       {isModalOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 flex items-center justify-center rounded-lg">
-          <div className="bg-[#F7F8F9] w-[90%] h-auto lg:w-[90%] lg:h-auto md:w-[90%] md:h-[90%] max-h-[90vh]  rounded-lg md:block lg:flex relative p-[12px] md:gap-0 lg:gap-3">
-            <div className="md:w-full lg:w-1/2 md:h-[auto] lg:h-auto">
-              <div className="relative">
-                <img
-                  className="lg:w-full lg:h-[100%] md:h-[420px] md:w-full rounded-lg"
-                  src={image}
-                  alt="cross"
-                />
-              </div>
+        <div className="fixed -top-2 md:top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 flex items-center justify-center rounded-lg overflow-hidden h-auto">
+          <div className="bg-[#F7F8F9] rounded-lg md:block lg:flex relative p-[12px] w-[94%] h-[94%] md:w-[80%] md:h-auto lg:w-[90%] lg:h-[90%] md:gap-0 lg:gap-3">
+            <div className="md:w-full lg:w-1/2 h-auto">
+              <img
+                className="w-[100%] h-[100%] rounded-lg"
+                src={image}
+                alt="cross"
+              />
               {/*  */}
               <div className="popup-content">
                 <button
@@ -123,7 +121,7 @@ const ProductDetail = ({
                 </button>
               </div>
             </div>
-            <div class="h-[400px]  rounded-lg md:w-full lg:w-1/2 text-gray-600 body-font bg-[#F7F8F9] overflow-y-auto md:h-auto">
+            <div class="h-[350px] md:h-[400px]  rounded-lg md:w-full lg:w-1/2 text-gray-600 body-font bg-[#F7F8F9] overflow-y-auto lg:h-auto">
               <h1 class="text-[20px] md:text-4xl text-gray-800 sm:text-[24px] max-h-[70vh] font-semibold title-font mb-3 mt-4">
                 {allData.product_name}
               </h1>
@@ -139,7 +137,7 @@ const ProductDetail = ({
                   {allData.specifications.primary_colors && (
                     <div>
                       <p className="text-[#727681] font-normal">Color</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.specifications.primary_colors}
                       </p>
                     </div>
@@ -149,7 +147,7 @@ const ProductDetail = ({
                       <p className="text-[#727681] font-normal">
                         Shade Variations
                       </p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.specifications.shade_variations}
                       </p>
                     </div>
@@ -159,7 +157,7 @@ const ProductDetail = ({
                   {allData.tone && (
                     <>
                       <p className="text-[#727681] font-normal">Tone</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.tone}
                       </p>
                     </>
@@ -176,7 +174,7 @@ const ProductDetail = ({
                   {allData.category && (
                     <div>
                       <p className="text-[#727681] font-normal">Category</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.category}
                       </p>
                     </div>
@@ -184,7 +182,7 @@ const ProductDetail = ({
                   {allData.size && (
                     <div>
                       <p className="text-[#727681] font-normal">Size</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.size[0]}
                       </p>
                     </div>
@@ -194,7 +192,7 @@ const ProductDetail = ({
                   {allData.thickness && (
                     <div>
                       <p className="text-[#727681] font-normal">Thickness</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.thickness[0]}
                       </p>
                     </div>
@@ -202,7 +200,7 @@ const ProductDetail = ({
                   {allData.wear_layer && (
                     <div>
                       <p className="text-[#727681] font-normal">Wear Layer</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.wear_layer[0]}
                       </p>
                     </div>
@@ -212,7 +210,7 @@ const ProductDetail = ({
                   {allData.specifications.warranty && (
                     <div>
                       <p className="text-[#727681] font-normal">Warranty</p>
-                      <p className="text-[14px] font-semibold">
+                      <p className="text-[14px] md:text-[16px] font-semibold">
                         {allData.specifications.warranty}
                       </p>
                     </div>
