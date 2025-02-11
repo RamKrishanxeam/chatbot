@@ -112,15 +112,19 @@ const ProductDetail = ({
               {/*  */}
               <div className="popup-content">
                 <button
-                  className="absolute right-2 top-2 text-xl bg-[#fff] px-3 py-1 rounded-full"
+                  className="absolute right-2 top-2 border-0 cursor-pointer"
                   onClick={() => setModalOpen(false)}
                 >
-                  X
+                  <img
+                    src={crossbutton}
+                    alt="cross"
+                    className="w-[24px] h-auto"
+                  />
                 </button>
               </div>
             </div>
             <div class="rounded-lg md:w-full lg:w-1/2 text-gray-600 body-font bg-[#F7F8F9] overflow-y-auto lg:h-auto">
-              <h1 class="text-[20px] md:text-4xl text-gray-800 sm:text-[24px] max-h-[70vh] overflow-y-auto font-semibold title-font mb-3 mt-4">
+              <h1 class="text-[20px] md:text-4xl text-gray-800 sm:text-[24px] max-h-[70vh] font-semibold title-font mb-3 mt-4">
                 {allData.product_name}
               </h1>
               <p className="text-[14px] md:text-[16px] mb-4 md:pb-5">
