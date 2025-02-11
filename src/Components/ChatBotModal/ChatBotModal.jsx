@@ -38,18 +38,20 @@ const ChatBotModal = ({
     modalOpen && (
       <div className="chatbot-container">
         <div className="flex items-center justify-between md:justify-start gap-3 p-3">
-          <img
-            src={star}
-            alt="arrow down"
-            className="w-[48px] md:w-[60px] h-full cursor-pointer"
-          />
-          <div>
-            <p className="font-semibold text-[16px] md:text-[22px]">
-              MSI x RARA AI Assistant
-            </p>
-            <p className="text-[#727681] text-[12px] md:text-[16px]">
-              We are online to assist you
-            </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={star}
+              alt="arrow down"
+              className="w-[48px] md:w-[60px] h-full cursor-pointer"
+            />
+            <div>
+              <p className="font-semibold text-[16px] md:text-[22px]">
+                MSI x RARA AI Assistant
+              </p>
+              <p className="text-[#727681] text-[12px] md:text-[16px]">
+                We are online to assist you
+              </p>
+            </div>
           </div>
           <img
             src={crossButton}
