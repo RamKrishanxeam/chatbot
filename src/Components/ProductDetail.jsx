@@ -100,7 +100,7 @@ const ProductDetail = ({
 
       {isModalOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 flex items-center justify-center rounded-lg">
-          <div className="bg-[#F7F8F9] w-[90%] h-auto lg:w-[90%] lg:h-auto md:w-[90%] md:h-[90%] max-h-[90vh] overflow-y-auto rounded-lg md:block lg:flex relative p-[12px] md:gap-0 lg:gap-3">
+          <div className="bg-[#F7F8F9] w-[90%] h-auto lg:w-[90%] lg:h-auto md:w-[90%] md:h-[90%] max-h-[90vh]  rounded-lg md:block lg:flex relative p-[12px] md:gap-0 lg:gap-3">
             <div className="md:w-full lg:w-1/2 md:h-[auto] lg:h-auto">
               <div className="relative">
                 <img
@@ -112,18 +112,18 @@ const ProductDetail = ({
               {/*  */}
               <div className="popup-content">
                 <button
-                  className="absolute right-2 top-2 border-0 cursor-pointer"
+                  className="absolute right-1 top-1 border-0 cursor-pointer"
                   onClick={() => setModalOpen(false)}
                 >
                   <img
                     src={crossbutton}
                     alt="cross"
-                    className="w-[24px] h-auto"
+                    className="w-[24px] md:w-[32px] h-auto"
                   />
                 </button>
               </div>
             </div>
-            <div class="rounded-lg md:w-full lg:w-1/2 text-gray-600 body-font bg-[#F7F8F9] overflow-y-auto lg:h-auto">
+            <div class="h-[400px]  rounded-lg md:w-full lg:w-1/2 text-gray-600 body-font bg-[#F7F8F9] overflow-y-auto md:h-auto">
               <h1 class="text-[20px] md:text-4xl text-gray-800 sm:text-[24px] max-h-[70vh] font-semibold title-font mb-3 mt-4">
                 {allData.product_name}
               </h1>
