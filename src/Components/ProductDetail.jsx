@@ -75,7 +75,7 @@ const ProductDetail = ({
             {pre}
           </p>
           <div
-            className={`${commonButton} inline-grid w-full  md:flex lg:justify-between md:justify-center lg:flex-row md:gap-2 px-2 md:px-0`}
+            className={`${commonButton} inline-grid w-full  md:flex lg:justify-between md:flex-col md:justify-center lg:flex-row md:gap-2 px-2 md:px-0`}
           >
             <button
               className={`${button1} text-[#1D73F2] border-0  bg-[#1D73F20F] rounded-full  px-5 py-1 text-[12px] md:text-[14px] lg:text-[14px] mb-2 md:mb-0`}
