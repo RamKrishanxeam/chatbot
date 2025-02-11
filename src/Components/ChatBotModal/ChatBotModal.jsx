@@ -37,24 +37,24 @@ const ChatBotModal = ({
   return (
     modalOpen && (
       <div className="chatbot-container">
-        <div className="flex items-center justify-between gap-3 p-3">
+        <div className="flex items-center justify-between md:justify-start gap-3 p-3">
           <img
             src={star}
             alt="arrow down"
-            className="w-16 h-full cursor-pointer"
+            className="w-[48px] md:w-[60px] h-full cursor-pointer"
           />
           <div>
             <p className="font-semibold text-[16px] md:text-[22px]">
               MSI x RARA AI Assistant
             </p>
-            <p className="text-[#727681] text-[13px] md:text-[22px]">
+            <p className="text-[#727681] text-[12px] md:text-[16px]">
               We are online to assist you
             </p>
           </div>
           <img
             src={crossButton}
             alt="crossButton"
-            className="w-8 h-8 cursor-pointer"
+            className="w-8 h-8 cursor-pointer block sm:hidden"
             onClick={closeModal}
           />
         </div>

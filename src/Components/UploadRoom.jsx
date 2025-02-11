@@ -43,7 +43,7 @@ const UploadRoom = ({ handleUpload, loading }) => {
           <p className="text-[12px] text-[#727681]">
             Drop your image here, or
             <span
-              className="text-[#1D73F2] ms-2"
+              className="text-[#1D73F2] ms-1"
               onClick={(e) => {
                 e.stopPropagation(); // Prevent parent click trigger
                 triggerFileInput();

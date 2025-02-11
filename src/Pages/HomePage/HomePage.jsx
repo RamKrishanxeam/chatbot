@@ -864,7 +864,7 @@ const MainPage = () => {
           <img
             src={homepageLogo}
             alt="homepage logo"
-            className="w-20 h-full cursor-pointer"
+            className="w-[66px] h-full cursor-pointer"
             onClick={() => {
               toggleModal(); // Toggle the modal visibility
               toggleImage(); // Toggle between images
@@ -875,7 +875,7 @@ const MainPage = () => {
           <img
             src={arrowDown}
             alt="arrow down"
-            className="w-20 h-full cursor-pointer"
+            className="w-[66px] h-full cursor-pointer"
             onClick={() => {
               toggleModal(); // Toggle the modal visibility
               toggleImage(); // Toggle between images

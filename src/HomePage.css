@@ -1,6 +1,5 @@
 .home-page {
   display: flex;
-  height: 100vh; /* Ensures full viewport height */
   background-color: #faf9f9; /* Optional background color */
 }
 .home-landing-container {
