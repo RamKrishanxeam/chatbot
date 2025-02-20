@@ -39,49 +39,51 @@ const InputBox = ({ handleSendMessage, loading, handleUpload }) => {
   };
 
   return (
-    <div className="flex items-center justify-center input-container absolute left-0 right-0 bottom-4 w-[347px] mx-auto md:w-[628px] md:mx-auto h-[56px] rounded-[12px] border  ">
-      <input
-        type="text"
-        value={input}
-        onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
-        placeholder="Write a message..."
-        className="outline-none"
-      />
-
-      <div className="flex items-center">
-        <button
-          type="button"
-          onClick={triggerFileInput}
-          aria-label="Attach a file"
-          style={{ background: "none", border: "none" }}
-        >
-          <img
-            src={attachment}
-            alt="Attach"
-            className="w-[34px] h-[34px] cursor-pointer"
-          />
-        </button>
+    <div className="input-container absolute left-0 right-0 bottom-4 rounded-[12px] border">
+      <div className="flex items-center justify-center ">
         <input
-          type="file"
-          accept="image/*" // Only allow image files
-          style={{ display: "none" }} // Hide the input
-          ref={fileInputRef} // Attach the ref
-          onChange={handleFileChange} // Handle file change
+          type="text"
+          value={input}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+          placeholder="Write a message..."
+          className="outline-none"
         />
-        <button
-          type="button"
-          onClick={() => handleSendMessageWithButton(input)} // Trigger send message function
-          aria-label="Send message"
-          disabled={!input.trim() || loading} // Disable if input is empty
-          style={{ background: "none", border: "none" }} // Ensure no residual styles
-        >
-          <img
-            src={send}
-            alt="Send"
-            className="w-[40px] h-[40px] cursor-pointer"
+
+        <div className="flex items-center">
+          <button
+            type="button"
+            onClick={triggerFileInput}
+            aria-label="Attach a file"
+            style={{ background: "none", border: "none" }}
+          >
+            <img
+              src={attachment}
+              alt="Attach"
+              className="w-[34px] h-[34px] cursor-pointer"
+            />
+          </button>
+          <input
+            type="file"
+            accept="image/*" // Only allow image files
+            style={{ display: "none" }} // Hide the input
+            ref={fileInputRef} // Attach the ref
+            onChange={handleFileChange} // Handle file change
           />
-        </button>
+          <button
+            type="button"
+            onClick={() => handleSendMessageWithButton(input)} // Trigger send message function
+            aria-label="Send message"
+            disabled={!input.trim() || loading} // Disable if input is empty
+            style={{ background: "none", border: "none" }} // Ensure no residual styles
+          >
+            <img
+              src={send}
+              alt="Send"
+              className="w-[40px] h-[40px] cursor-pointer"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
