@@ -1,6 +1,10 @@
 .home-page {
-  display: flex;
-  background-color: #faf9f9; /* Optional background color */
+  display: flex ;
+  flex-direction: column;
+  align-items: flex-end;
+  transform-origin: right bottom;
+  background-color: #faf9f9; 
+  margin: 20px;
 }
 .home-landing-container {
   padding: 20px;
